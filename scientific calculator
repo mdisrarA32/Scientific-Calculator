@@ -1,0 +1,81 @@
+import math
+print("'''''''''''''''''''''''''''SCIENTIFIC CALCULATOR''''''''''''''''''''''''''''")
+print('''
+Press
+1-Add
+2-Substract
+3-Multiply
+4-Divide
+5-Square root
+6-exponent
+7-mod(%)
+8-Radian to degree
+9-Degree to radian
+10-Sine
+11-Cosine
+12-Tangent
+13-For exit
+''')
+while True:
+    x=input("Enter the operation value: ")
+    while int(x)<13:    
+        if x=="1":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Sum of",a,"and",b,":",a+b)
+            break
+        elif x=="2":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Difference of",a,"and",b,":",a-b)
+            break
+        elif x=="3":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Multiplication of",a,"and",b,":",a*b)
+            break
+        elif x=="4":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Division of",a,"and",b,":","%.3f"%(a/b))
+            break
+        elif x=="5":
+            a=float(input("Enter the first value: "))
+            print("Square root of",a,":",a**(1/2))
+            break
+        elif x=="6":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Exponent of",a,"and",b,":",math.pow(a,b))
+            break
+        elif x=="7":
+            a=float(input("Enter the first value: "))
+            b=float(input("Enter the second value: "))
+            print("Mod of",a,"and",b,":",a%b)
+            break
+        elif x=="8":
+            a=float(input("Enter the first value in radians: "))
+            print("Radian to degree of",a,":",math.degrees(a))
+            break
+        elif x=="9":
+            a=float(input("Enter the first value in degrees: "))
+            print("Degree to radian of",a,":",math.radians(a))
+            break
+        elif x=="10":
+            a=float(input("Enter the first value: "))
+            b=math.radians(a)
+            print("Sine of",a,":",math.sin(b))
+            break
+        elif x=="11":
+            a=float(input("Enter the first value: "))
+            b=math.radians(a)
+            print("Cosine of",a,":",math.cos(b))
+            break
+        elif x=="12":
+            a=float(input("Enter the first value: "))
+            b=math.radians(a)
+            print("Tangent of",a,":",math.tan(b))
+            break
+    if x=="13":
+        print("Exit from the loop")
+        break
